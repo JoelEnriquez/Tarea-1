@@ -10,5 +10,8 @@ package Logica;
  * @author joel
  */
 public class Logica {
+
+    public Logica() {
+    }
     
 }
