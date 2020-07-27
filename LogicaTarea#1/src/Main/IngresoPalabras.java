@@ -41,9 +41,7 @@ public class IngresoPalabras {
         } while (!avanzar);
         
         DecodificadorADN decodificadorADN = new DecodificadorADN(cadena1, cadena2);
-        System.out.println(decodificadorADN.ejecutarDecodificador());
-        
-        
+        System.out.println(decodificadorADN.ejecutarDecodificador());   
     }
 
     public void cadenaPermitida(String cadena){
