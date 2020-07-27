@@ -64,7 +64,7 @@ public class IngresoGUI extends javax.swing.JDialog {
 
         resultadoTextField.setEditable(false);
         resultadoTextField.setBackground(new java.awt.Color(0, 0, 0));
-        resultadoTextField.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        resultadoTextField.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         resultadoTextField.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -117,6 +117,10 @@ public class IngresoGUI extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Este metodo sirve para que solo se ingresen letras
+     * @param evt 
+     */
     private void cadena1textFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cadena1textFieldKeyTyped
         char validar = evt.getKeyChar();
 
@@ -126,6 +130,10 @@ public class IngresoGUI extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_cadena1textFieldKeyTyped
 
+    /**
+     * Este metodo sirve para que solo se ingresen letras
+     * @param evt 
+     */
     private void cadena2textFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cadena2textFieldKeyTyped
         char validar = evt.getKeyChar();
 
@@ -145,6 +153,8 @@ public class IngresoGUI extends javax.swing.JDialog {
         else{     
             DecodificadorADN decodificadorADN = new DecodificadorADN(cadena1, cadena2);
             resultadoTextField.setText(decodificadorADN.ejecutarDecodificador());
+            
+            //Limpiar los text field
             cadena1textField.setText("");
             cadena2textField.setText("");
         }
